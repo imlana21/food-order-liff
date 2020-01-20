@@ -1,0 +1,45 @@
+#welcomewrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  text-align: center;
+}
+
+#welcomewrapper .welcome {
+  font-size: 33pt;
+  display: block;
+}
+
+#homewrapper {
+  overflow-x : hidden;
+}
+
+.nav-wrapper a i{
+  padding-left: 10px;
+  margin-right: 10px 
+}
+
+.nav-wrapper span {
+  font-size: 1.3em
+}
+
+article {
+  margin: 25px 10px
+}
+
+#homewrapper article #list_data {
+  text-align: center;
+}
+
+#homewrapper #add_button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+}
+
+/* Universal CSS */
+.hidden {
+  display: none;
+}

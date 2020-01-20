@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Dompet Q </title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">  
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body style="overflow: hidden;">
+	<!-- Login Pages -->
+	<div id="welcomewrapper">
+		<div id="liffAppContent" class="">
+			<span class="welcome bounceInDown animated"> Welcome to DompetQ </span>
+			<span style="display: block;"> Aplikasi ini dibuat oleh <a href="https://gitlab.com/lana404"> Ihwan Mualana </a></span>
+			<br>
+			<div class="fadeInDown animated">
+				<a class="waves-effect waves-light btn green" href="Javascript:void(0)" id="liffLoginButton"> Login </a>
+                <a class="waves-effect waves-light btn green" href="home.html" id="liffLogoutButton"> Logout </a>
+				<a class="waves-effect waves-light btn red"> Exit </a>
+			</div>
+			<div class="fadeInDown animated" id="nextButton" style="margin: 10px 0;">
+				
+			</div>
+		</div>
+		<!-- LIFF ID ERROR -->
+        <div id="liffIdErrorMessage" class="hidden">
+            <p> Error : <span id="errorCode"></span></p>
+            <p> Inisialisasi LIFF Gagal. Kemungkinan error disebabkan karena : </p>
+            <ul>
+                <li> Variabel LiffId pada <code> ../js/liff-starter.js </code> kosong. </li>
+                <li> LIFF ID aplikasi salah atau tidak terdaftar. </li>
+                <li> Server Hosting aplikasi terganggu. </li>
+            </ul>
+            <p> Untuk informasi lebih lanjut dapat dilihat di <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
+        </div>
+        <!-- LIFF INIT ERROR -->
+        <div id="liffInitErrorMessage" class="hidden">
+            <p>Something went wrong with LIFF initialization.</p>
+            <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>.
+                <p>You have not assigned any value for LIFF ID.</p>
+                <p>If you are running the app using Node.js, please set the LIFF ID as an environment variable in your
+                Heroku account follwing the below steps: </p>
+                <code id="code-block">
+                    <ol>
+                        <li>Go to `Dashboard` in your Heroku account.</li>
+                        <li>Click on the app you just created.</li>
+                        <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
+                        <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
+                        <li>Your app should be up and running. Enter the URL of your app in a web browser.</li>
+                    </ol>
+                </code>
+                <p>If you are using any other platform, please add your LIFF ID in the <code>index.html</code> file.</p>
+                <p>For more information about how to add your LIFF ID, see <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
+        </div>
+        <!-- LIFF INIT ERROR -->
+        <div id="liffInitErrorMessage" class="hidden">
+                <p>Something went wrong with LIFF initialization.</p>
+                <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>. </p>
+        </div>
+        <!-- NODE.JS LIFF ID ERROR -->
+        <div id="nodeLiffIdErrorMessage" class="hidden">
+            <p>Unable to receive the LIFF ID as an environment variable.</p>
+        </div>
+	</div>
+
+	
+	<!-- JQUERY -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  	<!-- MATERIALIZE -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- LINE SDK -->
+	<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+	<script type="text/javascript" src="js/liff-starter.js"></script>
+	<!-- CONFIG -->
+	<script type="text/javascript" src="js/config.js"></script>
+	<!-- STYLE -->
+	<script type="text/javascript" src="js/style.js"></script>
+</body>
+</html>

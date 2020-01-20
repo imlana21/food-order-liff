@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Dompet Q </title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">  
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<!-- Dasar Aplikasi -->
+	<div id="homewrapper">
+		<nav>
+    		<div class="nav-wrapper">
+				<a href="" style="color: black">
+					<i class="material-icons" style="float: left;">arrow_back</i>
+				</a>
+				<span> Data Keuangan </span>
+			</div>
+		</nav>
+		<article>
+			<div id="list_data" class="">
+				Tidak ada Data
+			</div>
+			<div id="tambah_data" class="row hidden">
+				<form id="form-tambah" class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+	          				<input placeholder="" id="tambah_tanggal" type="text" class="datepicker validate">
+				        	<label for="tambah_tanggal"> Tanggal </label>
+	        			</div>
+						<div class="input-field col s12">
+							<select id="tambah_status">
+	      						<option value="" disabled selected></option>
+	      						<option value="Keluar"> Keluar </option>
+	      						<option value="Masuk"> Masuk </option>
+	    					</select>
+				        	<label for="tambah_status"> Status </label>
+	  					</div>
+						<div class="input-field col s12">
+	          				<input placeholder="" id="tambah_keterangan" type="text" class="validate">
+				        	<label for="tambah_keterangan"> Keterangan </label>
+	        			</div>
+						<div class="input-field col s12">
+	          				<input placeholder="" id="tambah_jumlah" type="text" class="validate">
+				        	<label for="tambah_jumlah"> Jumlah </label>
+	        			</div>
+	        		</div>
+	        		<div class="row">
+	        			<div class="input-field col s12">
+	        				<div class="right">
+	        					<a class="waves-effect waves-light btn red"> Keluar </a>
+	        					<a class="waves-effect waves-light btn"> Tambah </a>
+	        				</div>
+	        			</div>
+	        		</div>
+				</form>
+			</div>
+			<div id="edit_data" class="row hidden">
+				<form id="form_edit" class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+	          				<input placeholder="" id="edit_id" type="text" class="validate" disabled="">
+				        	<label for="edit_id"> ID </label>
+	        			</div>
+						<div class="input-field col s12">
+	          				<input placeholder="" id="edit_tanggal" type="text" class="datepicker validate">
+				        	<label for="edit_tanggal"> Tanggal </label>
+	        			</div>
+						<div class="input-field col s12">
+							<select id="edit_status">
+	      						<option value="" disabled selected></option>
+	      						<option value="1"> Keluar </option>
+	      						<option value="2"> Masuk </option>
+	    					</select>
+				        	<label for="edit_status"> Status </label>
+	  					</div>
+						<div class="input-field col s12">
+	          				<input placeholder="" id="edit_keterangan" type="text" class="validate">
+				        	<label for="edit_keterangan"> Keterangan </label>
+	        			</div>
+						<div class="input-field col s12">
+	          				<input placeholder="" id="edit_jumlah" type="text" class="validate">
+				        	<label for="edit_jumlah"> Jumlah </label>
+	        			</div>
+	        		</div>
+	        		<div class="row">
+	        			<div class="input-field col s12">
+	        				<div class="right">
+	        					<a class="waves-effect waves-light btn red"> Keluar </a>
+	        					<a class="waves-effect waves-light btn"> Simpan </a>
+	        				</div>
+	        			</div>
+	        		</div>
+				</form>
+			</div>
+			<div id="add_button">
+				<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+			</div>
+		</article>
+		<footer>
+			
+		</footer>
+	</div>
+	
+	<!-- JQUERY -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  	<!-- MATERIALIZE -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- LINE SDK -->
+	<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+	<script type="text/javascript" src="js/liff-starter.js"></script>
+	<!-- CONFIG -->
+	<script type="text/javascript" src="js/config.js"></script>
+	<!-- STYLE -->
+	<script type="text/javascript" src="js/style.js"></script>
+</body>
+</html>
