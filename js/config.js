@@ -4,6 +4,11 @@ function buttonHandlers() {
 			liff.login();
 		}
 	});
+	$('liffLogoutButton').on('click', function() {
+		if (liff.isLoggedIn()) {
+			liff.logout();
+		}
+	});
 }
 
 //Memanggul fungsi buttonHandlers
