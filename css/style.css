@@ -11,35 +11,57 @@
   display: block;
 }
 
+#nextButton, #aboutButton {
+  margin-top: 15px;
+}
+
 #homewrapper {
-  overflow-x : hidden;
+  overflow-x : auto;
 }
 
-.nav-wrapper a i{
+#homewrapper nav {
+  position: fixed;
+}
+
+#homewrapper .nav-wrapper a i{
   padding-left: 10px;
-  margin-right: 10px 
+  margin-right: 10px; 
 }
 
-.nav-wrapper span {
+#homewrapper .nav-wrapper span {
   font-size: 1.3em
 }
 
-article {
-  margin: 25px 10px
+#homewrapper article {
+  margin: 6em 10px
 }
 
 #homewrapper article #list_data {
   text-align: center;
 }
 
-#homewrapper #add_button {
-  position: absolute;
+#homewrapper #bt_float {
+  position: fixed;
   bottom: 0;
   right: 0;
   margin: 15px;
+  overflow: hidden;
 }
 
-/* Universal CSS */
+#homewrapper #bt_float #add_button {
+  margin-bottom: 10px;
+}
+
+/* Error Notification */
+#liffIdErrorMessage {
+  text-align: center;
+}
+
+#liffIdErrorMessage ol {
+  list-style: none;
+}
+
+/* Toggle CSS */
 .hidden {
   display: none;
 }

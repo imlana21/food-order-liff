@@ -12,14 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css">  
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="css/style.css">
-	
 </head>
-<body>
+<body onload="readData()">
 	<!-- Dasar Aplikasi -->
 	<div id="homewrapper">
 		<nav>
     		<div class="nav-wrapper">
-				<a href="" style="color: black">
+				<a href="home.html" style="color: black">
 					<i class="material-icons" style="float: left;">arrow_back</i>
 				</a>
 				<span> Data Keuangan </span>
@@ -27,17 +26,16 @@
 		</nav>
 		<article>
 			<div id="list_data" class="">
-				Tidak ada Data
 			</div>
-			<div id="tambah_data" class="row hidden">
-				<form id="form-tambah" class="col s12">
+			<div id="tambah_data" class="row fadeInDownBig hidden animated">
+				<form id="form_tambah" class="col s12">
 					<div class="row">
 						<div class="input-field col s12">
-	          				<input placeholder="" id="tambah_tanggal" type="text" class="datepicker validate">
+	          				<input placeholder="" id="tambah_tanggal" type="text" class="datepicker validate" required="">
 				        	<label for="tambah_tanggal"> Tanggal </label>
 	        			</div>
 						<div class="input-field col s12">
-							<select id="tambah_status">
+							<select id="tambah_status" required="">
 	      						<option value="" disabled selected></option>
 	      						<option value="Keluar"> Keluar </option>
 	      						<option value="Masuk"> Masuk </option>
@@ -45,25 +43,25 @@
 				        	<label for="tambah_status"> Status </label>
 	  					</div>
 						<div class="input-field col s12">
-	          				<input placeholder="" id="tambah_keterangan" type="text" class="validate">
+	          				<input placeholder="" id="tambah_keterangan" type="text" class="validate" required="">
 				        	<label for="tambah_keterangan"> Keterangan </label>
 	        			</div>
 						<div class="input-field col s12">
-	          				<input placeholder="" id="tambah_jumlah" type="text" class="validate">
+	          				<input placeholder="" id="tambah_jumlah" type="number" class="validate" required="">
 				        	<label for="tambah_jumlah"> Jumlah </label>
 	        			</div>
 	        		</div>
 	        		<div class="row">
 	        			<div class="input-field col s12">
 	        				<div class="right">
-	        					<a class="waves-effect waves-light btn red"> Keluar </a>
-	        					<a class="waves-effect waves-light btn"> Tambah </a>
+	        					<a class="waves-effect waves-light btn red cancel_button" id=""> Cancel </a>
+	        					<a class="waves-effect waves-light btn" id="simpan_button"> Tambah </a>
 	        				</div>
 	        			</div>
 	        		</div>
 				</form>
 			</div>
-			<div id="edit_data" class="row hidden">
+			<div id="edit_data" class="row fadeInDownBig hidden animated">
 				<form id="form_edit" class="col s12">
 					<div class="row">
 						<div class="input-field col s12">
@@ -77,8 +75,8 @@
 						<div class="input-field col s12">
 							<select id="edit_status">
 	      						<option value="" disabled selected></option>
-	      						<option value="1"> Keluar </option>
-	      						<option value="2"> Masuk </option>
+	      						<option value="Keluar"> Keluar </option>
+	      						<option value="Masuk"> Masuk </option>
 	    					</select>
 				        	<label for="edit_status"> Status </label>
 	  					</div>
@@ -94,19 +92,22 @@
 	        		<div class="row">
 	        			<div class="input-field col s12">
 	        				<div class="right">
-	        					<a class="waves-effect waves-light btn red"> Keluar </a>
-	        					<a class="waves-effect waves-light btn"> Simpan </a>
+	        					<a class="waves-effect waves-light btn red cancel_button" id=""> Cancel </a>
+	        					<a class="waves-effect waves-light btn" id="edit_button"> Edit </a>
 	        				</div>
 	        			</div>
 	        		</div>
 				</form>
 			</div>
-			<div id="add_button">
-				<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-			</div>
+			<div>&nbsp</div>
 		</article>
-		<footer>
-			
+		<footer class="pulse animated" id="bt_float">
+			<div id="add_button" >
+					<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+				</div>
+				<div id="home_button">
+					<a class="btn-floating btn-large waves-effect waves-light blue" href="index.html"><i class="material-icons">home</i></a>
+				</div>
 		</footer>
 	</div>
 	

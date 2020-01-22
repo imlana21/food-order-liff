@@ -34,7 +34,6 @@ function initializeApp() {
         $('#liffLoginButton').addClass('hidden');
         $('#liffLogoutButton').removeClass('hidden');
         $('#nextButton').html('<a href="home.html"> Next </a>');
-        
     } else {
         $('#liffLoginButton').removeClass('hidden');
         $('#liffLogoutButton').addClass('hidden');
