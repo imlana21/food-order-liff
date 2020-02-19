@@ -21,4 +21,9 @@ $(document).ready(function() {
 			external : true
 		});
 	});
+	// Event Listener Next Button
+	$('#nextButton').on('click', function() {
+		window.location.assign('home.html')
+	});
+	
 })

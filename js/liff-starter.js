@@ -1,15 +1,16 @@
-//var LiffId = "1653865072-pW0LzAQ9";
 /**
  * Cek LIFF ID
  */
-function initializeOrLiffDie(myLiffId) {
+ $(document).ready(function() {
+    var myLiffId = "1653865072-pW0LzAQ9";
+
     if(!myLiffId || myLiffId == '') {
         $('#liffAppContent').addClass('hidden');
-        document.write('LIFF ID Kosong');
+        $('#idNotAvailable').removeClass('hidden');
     } else {
         initializeLiff(myLiffId);
     }
-}
+ })
 /**
  * Inisialisasi LIFF
  */
@@ -33,11 +34,12 @@ function initializeApp() {
     if (liff.isLoggedIn()) {
         $('#liffLoginButton').hide();
         $('#liffLogoutButton').show();
-        $('#nextButton').html('<a href="home.html"> Next >></a>');
+        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
+        $('#homewrapper').removeClass('hidden');
+        $('#notYetIn').hide();
     } else {
         $('#liffLoginButton').show();
         $('#liffLogoutButton').hide();
+        $('#homewrapper').addClass('hidden');
     }
 }
-
-initializeOrLiffDie(LiffId);

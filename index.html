@@ -25,7 +25,8 @@
                 <a class="waves-effect waves-light btn green" href="Javascript:void(0)" id="liffLogoutButton"> Logout </a>
 				<a class="waves-effect waves-light btn red"> Exit </a>
 			</div>
-			<div class="fadeInDown animated" id="nextButton">		
+			<div class="fadeInDown animated" id="nextButton">	
+				<a href="Javascript:void(0)"> Next >></a>	
 			</div>
 			<div>&nbsp</div>
 			<div class="fadeInDown animated">			
@@ -45,14 +46,9 @@
             </p>
             <p> Untuk informasi lebih lanjut dapat dilihat di <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
         </div>
-        <!-- LIFF INIT ERROR -->
-        <div id="liffInitErrorMessage" class="hidden">
-                <p>Something went wrong with LIFF initialization.</p>
-                <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>. </p>
-        </div>
         <!-- NODE.JS LIFF ID ERROR -->
-        <div id="nodeLiffIdErrorMessage" class="hidden">
-            <p>Unable to receive the LIFF ID as an environment variable.</p>
+        <div id="idNotAvailable" class="hidden">
+            <p> LIFF ID pada aplikasi anda kosong </p>
         </div>
 	</div>
 

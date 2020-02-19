@@ -45,6 +45,10 @@
   list-style: none;
 }
 
+#idNotAvailable p{
+  text-align: center;
+}
+
 /* Toggle CSS */
 .hidden {
   display: none;
