@@ -1,4 +1,4 @@
-/*$(document).ready(function() {
+$(document).ready(function() {
 	// Event Listener Button Login
 	$('#liffLoginButton').on('click', function() {
 		//Cek Apakah user sudah login
@@ -24,4 +24,3 @@
 		});
 	});	
 })
-*/
