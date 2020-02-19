@@ -29,8 +29,10 @@ $(document).ready(function() {
 			const accessToken = liff.getAccessToken();
 
 			$('#nextButton').html('<a href="Javascript:void(0)"> Inisialisasi >></a>');
+			if (liff.getAccessToken()) {
+				alert(liff.getAccessToken());
+			}	
 			
-			alert(liff.getAccessToken());
 		}
 		//window.location.assign('home.html')
 	});
