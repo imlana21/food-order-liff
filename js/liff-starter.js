@@ -1,4 +1,4 @@
-var LiffId = "1653865072-pW0LzAQ9";
+//var LiffId = "1653865072-pW0LzAQ9";
 /**
  * Cek LIFF ID
  */
@@ -33,7 +33,7 @@ function initializeApp() {
     if (liff.isLoggedIn()) {
         $('#liffLoginButton').hide();
         $('#liffLogoutButton').show();
-        $('#nextButton').html('<a href="home.html"> Next </a>');
+        $('#nextButton').html('<a href="home.html"> Next >></a>');
     } else {
         $('#liffLoginButton').show();
         $('#liffLogoutButton').hide();

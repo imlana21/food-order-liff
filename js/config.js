@@ -14,4 +14,11 @@ $(document).ready(function() {
 			window.location.reload();
 		}
 	});
+	// Event Listener untuk membuka aplikasi di browser
+	$('#openExternal').on('click', function() {
+		liff.openWindow({
+			url : 'http://localhost/git-push/Learning/Dicoding-LineLIFF/Submission/',
+			external : true
+		});
+	});
 })
