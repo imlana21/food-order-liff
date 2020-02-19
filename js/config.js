@@ -50,16 +50,20 @@ $(document).ready(function() {
 
 	// Button Pesan Menu
 	$('#pesanMenu').on('click', function() {
-		liff
-			.sendMessages([{
-            	'type': 'text',
-            	'text': "You've successfully sent a message! Hooray!"
-        	}])
-        	.then(function() {
-            	window.alert('Message sent');
-        	})
-        	.catch(function(error) {
-            	window.alert('Error sending message: ' + error);
-        	});
+		if (!liff.isInClient()) {
+			window.alert("Anda Membuka aplikasi lewat desktop");
+		} else {
+			liff
+				.sendMessages([{
+	            	'type': 'text',
+	            	'text': "You've successfully sent a message! Hooray!"
+	        	}])
+	        	.then(function() {
+	            	window.alert('Message sent');
+	        	})
+	        	.catch(function(error) {
+	            	window.alert('Error sending message: ' + error);
+	        	});
+	    }
 	});
 })
