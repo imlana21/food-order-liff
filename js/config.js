@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 			if (accessToken != '' || accessToken != null) {
 				window.location.assign('home.html');
-				$('#liffAppContent').html(accessToken);
+				$('#homewrapper').html(accessToken);
 			} else {
 				alert('Gagal Mendapatkan Acces Token');
 			}
