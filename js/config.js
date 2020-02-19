@@ -1,3 +1,10 @@
+/************************
+ ************************
+ *    Button Config     *
+ ************************
+ ***********************/
+
+
 $(document).ready(function() {
 	// Event Listener Button Login
 	$('#liffLoginButton').on('click', function() {
@@ -26,6 +33,15 @@ $(document).ready(function() {
 
 	// Next Button
 	$('#nextButton').on('click', function() {
+		if (!liff.isLoggedIn() && !liff.isInClient()) {
+			alert('Anda membuka aplikasi lewat browser. Harap Login dahulu!!!');
+		} else {
+			const accessToken = liff.getAccessToken();
+
+			$('#welcomewrapper').addClass('hidden');
+			$('#homewrapper').removeClass('hidden');
+			alert(accessToken);
+		}
 		
 	});
 })

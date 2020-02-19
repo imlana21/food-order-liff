@@ -1,6 +1,9 @@
-/**
- * Cek LIFF ID
- */
+/************************
+ ************************
+ *  Inisialisasi LiFF   *
+ ************************
+ ***********************/
+
  $(document).ready(function() {
     var myLiffId = "1653865072-pW0LzAQ9";
 
@@ -12,9 +15,8 @@
         initializeLiff(myLiffId);
     }
  })
-/**
- * Inisialisasi LIFF
- */
+
+//Inisialisasi
 function initializeLiff(myLiffId) {
     liff
         .init({
