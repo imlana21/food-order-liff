@@ -23,7 +23,16 @@ $(document).ready(function() {
 	});
 	// Event Listener Next Button
 	$('#nextButton').on('click', function() {
-		window.location.assign('home.html')
+		if (!liff.isLoggedIn() && !liff.isInClient()) {
+			alert("Aplikasi dibuka di browser. Silahkan Login dulu.");
+		} else {
+			const accessToken = liff.getAccessToken();
+
+			$('#nextButton').html('<a href="Javascript:void(0)"> Inisialisasi >></a>');
+			
+			alert(liff.getAccessToken());
+		}
+		//window.location.assign('home.html')
 	});
 	
 })
