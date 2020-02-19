@@ -26,12 +26,14 @@ $(document).ready(function() {
 		if (!liff.isLoggedIn() && !liff.isInClient()) {
 			alert("Aplikasi dibuka di browser. Silahkan Login dulu.");
 		} else {
-			const accessToken = liff.getAccessToken();
+			const accessToken ;//= liff.getAccessToken();
 
 			$('#nextButton').html('<a href="Javascript:void(0)"> Inisialisasi </a>');
 			if (accessToken) {
-				alert(accessToken);
-			}	
+				
+			} else {
+				alert('Gagal Mendapatkan Acces Token')
+			}
 			
 		}
 		//window.location.assign('home.html')
