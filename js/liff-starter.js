@@ -34,12 +34,8 @@ function initializeApp() {
     if (liff.isLoggedIn()) {
         $('#liffLoginButton').hide();
         $('#liffLogoutButton').show();
-        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
-        $('#homewrapper').removeClass('hidden');
-        $('#notYetIn').hide();
     } else {
         $('#liffLoginButton').show();
         $('#liffLogoutButton').hide();
-        $('#homewrapper').addClass('hidden');
     }
 }

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	// Event Listener Button Login
 	$('#liffLoginButton').on('click', function() {
 		//Cek Apakah user sudah login
@@ -19,29 +19,9 @@ $(document).ready(function() {
 	// Event Listener untuk membuka aplikasi di browser
 	$('#openExternal').on('click', function() {
 		liff.openWindow({
-			url : 'http://localhost/git-push/Learning/Dicoding-LineLIFF/Submission/',
+			url : 'https://dicoding-pesanmakan.herokuapp.com/',
 			external : true
 		});
-	});
-
-	// Event Listener Next Button
-	$('#nextButton').on('click', function() {
-		if (!liff.isLoggedIn() && !liff.isInClient()) {
-			alert("Aplikasi dibuka di browser. Silahkan Login dulu.");
-		} else {
-			const accessToken = liff.getAccessToken();
-
-			$('#nextButton').html('<a href="Javascript:void(0)"> Inisialisasi </a>');
-
-			if (accessToken != '' || accessToken != null) {
-				window.location.assign('home.html');
-				$('#homewrapper').html(accessToken);
-			} else {
-				alert('Gagal Mendapatkan Acces Token');
-			}
-			
-		}
-		//
-	});
-	
+	});	
 })
+*/

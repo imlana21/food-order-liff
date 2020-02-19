@@ -14,7 +14,7 @@
 	
 </head>
 <body style="overflow: hidden;">
-	<!-- Login Pages -->
+	<!-- Home Page -->
 	<div id="welcomewrapper">
 		<div id="liffAppContent" class="">
 			<span class="welcome bounceInDown animated"> Welcome to Cafe Barokah </span>
@@ -32,24 +32,136 @@
 				<a href="Javascript:void(0)" id="openExternal"> Buka Aplikasi di Eksternal Browser?</a>
 			</div>
         </div>
-		</div>
-		<!-- LIFF ID ERROR -->
-        <div id="liffIdErrorMessage" class="hidden">
-            <p> Error : <span id="errorCode"></span></p>
-            <p> Inisialisasi LIFF Gagal. Kemungkinan error disebabkan karena :
-                <ol>
-                    <li> Variabel LiffId pada <code> ../js/liff-starter.js </code> kosong. </li>
-                    <li> LIFF ID aplikasi salah atau tidak terdaftar. </li>
-                    <li> Server Hosting aplikasi terganggu. </li>
-                </ol>
-            </p>
-            <p> Untuk informasi lebih lanjut dapat dilihat di <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
-        </div>
-        <!-- NODE.JS LIFF ID ERROR -->
-        <div id="idNotAvailable" class="hidden">
-            <p> LIFF ID pada aplikasi anda kosong </p>
-        </div>
 	</div>
+
+	<!-- Halaman Pemesanan -->
+	<div id="homewrapper" class="hidden">
+		<nav>
+    		<div class="nav-wrapper">
+				<a href="home.html" style="color: black">
+					<i class="material-icons" style="float: left;">arrow_back</i>
+				</a>
+				<span> Welcome </span>
+			</div>
+		</nav>
+		<article id="liffAppContent">
+			<div id="welcome-message">
+				<p> Hai Commander </p>
+				<p> Silahkan pesan menu dibawah ini. </p>
+			</div>
+			<form action="#">
+				<div id="list-pesan">
+					<ul class="collapsible">
+					    <li>
+					      	<div class="collapsible-header"><i class="material-icons">local_pizza</i> Daftar Makanan </div>
+					      	<div class="collapsible-body">
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Indomie Rebus </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Indomie Goreng </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Bakmie </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Nasi Goreng </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Kwetiaw </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Bakmie </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Nasi Telor </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Nasi Sarden </span>
+								    </label>
+							    </div>
+					      	</div>
+					    </li>
+					    <li>
+					      	<div class="collapsible-header"><i class="material-icons">local_cafe</i> Daftar Minuman </div>
+					      	<div class="collapsible-body">
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Teh </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Kopi </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Susu </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Jeruk Peras </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Aqua </span>
+								    </label>
+							    </div>
+					      	</div>
+					    </li>
+					</ul>
+				</div>
+				<div class="row right">
+					<button class="waves-effect waves-light btn brown" type="reset" value="Reset"> Reset </button>
+					<button class="waves-effect waves-light btn" type="submit" value="Pesan"> Pesan </button>
+				</div>
+			</form>
+		</article>
+	</div>
+
+	<!-- Notifikasi Error -->
+	<div id="liffIdErrorMessage" class="hidden">
+        <p> Error : <span id="errorCode"></span></p>
+        <p> Inisialisasi LIFF Gagal. Kemungkinan error disebabkan karena :
+            <ol>
+                <li> Variabel LiffId pada <code> ../js/liff-starter.js </code> kosong. </li>
+                <li> LIFF ID aplikasi salah atau tidak terdaftar. </li>
+                <li> Server Hosting aplikasi terganggu. </li>
+            </ol>
+        </p>
+        <p> Untuk informasi lebih lanjut dapat dilihat di <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
+    </div>
 
 	
 	<!-- JQUERY -->
