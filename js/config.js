@@ -39,12 +39,8 @@ $(document).ready(function() {
 			$('#welcomewrapper').addClass('hidden');
 			$('#homewrapper').removeClass('hidden');
 
-			const accessToken = liff.getAccessToken();
-
-			liff.init(() => {
     			const idToken = liff.getDecodedIDToken();
     			console.log(idToken) // print decoded idToken object
-			});
 		}
 		
 	});
