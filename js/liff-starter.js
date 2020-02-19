@@ -35,8 +35,8 @@ function initializeApp() {
         $('#liffLogoutButton').show();
         $('#nextButton').html('<a href="home.html"> Next </a>');
     } else {
-        $('#liffLoginButton').hide();
-        $('#liffLogoutButton').show();
+        $('#liffLoginButton').show();
+        $('#liffLogoutButton').hide();
     }
 }
 
