@@ -39,8 +39,10 @@ $(document).ready(function() {
 			$('#welcomewrapper').addClass('hidden');
 			$('#homewrapper').removeClass('hidden');
 
-    			const idToken = liff.getDecodedIDToken();
-    			console.log(idToken) // print decoded idToken object
+			//Get User Profile
+    		const idToken = liff.getDecodedIDToken();
+    		
+    		$('#welcomeMsg #userName').html(idToken['name']);
 		}
 		
 	});
