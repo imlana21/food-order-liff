@@ -5,8 +5,9 @@
     var myLiffId = "1653865072-pW0LzAQ9";
 
     if(!myLiffId || myLiffId == '') {
+        $('#liffLoginContent').addClass('hidden');
         $('#liffAppContent').addClass('hidden');
-        $('#idNotAvailable').removeClass('hidden');
+        $('#liffIdKosong').removeClass('hidden');
     } else {
         initializeLiff(myLiffId);
     }
@@ -20,7 +21,6 @@ function initializeLiff(myLiffId) {
             liffId : myLiffId
         })
         .then(() => {
-            //Memanggil Fungsi LIFF API
             initializeApp();
         })
         .catch((err) => {
@@ -34,6 +34,7 @@ function initializeApp() {
     if (liff.isLoggedIn()) {
         $('#liffLoginButton').hide();
         $('#liffLogoutButton').show();
+        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
     } else {
         $('#liffLoginButton').show();
         $('#liffLogoutButton').hide();

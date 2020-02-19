@@ -23,4 +23,9 @@ $(document).ready(function() {
 			external : true
 		});
 	});	
+
+	// Next Button
+	$('#nextButton').on('click', function() {
+		
+	});
 })
