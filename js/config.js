@@ -36,11 +36,15 @@ $(document).ready(function() {
 		if (!liff.isLoggedIn() && !liff.isInClient()) {
 			alert('Anda membuka aplikasi lewat browser. Harap Login dahulu!!!');
 		} else {
-			const accessToken = liff.getAccessToken();
-
 			$('#welcomewrapper').addClass('hidden');
 			$('#homewrapper').removeClass('hidden');
-			alert(accessToken);
+
+			const accessToken = liff.getAccessToken();
+
+			liff.init(() => {
+    			const idToken = liff.getDecodedIDToken();
+    			console.log(idToken) // print decoded idToken object
+			});
 		}
 		
 	});
