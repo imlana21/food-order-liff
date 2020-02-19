@@ -7,6 +7,7 @@ $(document).ready(function() {
 			liff.login();
 		}
 	});
+
 	// Event Listener Button Login
 	$('#liffLogoutButton').on('click', function() {
 		if (liff.isLoggedIn() ) {
@@ -14,6 +15,7 @@ $(document).ready(function() {
 			window.location.reload();
 		}
 	});
+
 	// Event Listener untuk membuka aplikasi di browser
 	$('#openExternal').on('click', function() {
 		liff.openWindow({
@@ -21,6 +23,7 @@ $(document).ready(function() {
 			external : true
 		});
 	});
+
 	// Event Listener Next Button
 	$('#nextButton').on('click', function() {
 		if (!liff.isLoggedIn() && !liff.isInClient()) {
@@ -29,10 +32,12 @@ $(document).ready(function() {
 			const accessToken = liff.getAccessToken();
 
 			$('#nextButton').html('<a href="Javascript:void(0)"> Inisialisasi </a>');
+
 			if (accessToken != '' || accessToken != null) {
 				window.location.assign('home.html');
+				$('#liffAppContent').html(accessToken);
 			} else {
-				alert('Gagal Mendapatkan Acces Token')
+				alert('Gagal Mendapatkan Acces Token');
 			}
 			
 		}
