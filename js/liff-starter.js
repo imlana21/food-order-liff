@@ -1,20 +1,7 @@
-/************************
- ************************
- *  Inisialisasi LiFF   *
- ************************
- ***********************/
-
- $(document).ready(function() {
-    var myLiffId = "1653865072-pW0LzAQ9";
-
-    if(!myLiffId || myLiffId == '') {
-        $('#liffLoginContent').addClass('hidden');
-        $('#liffAppContent').addClass('hidden');
-        $('#liffIdKosong').removeClass('hidden');
-    } else {
-        initializeLiff(myLiffId);
-    }
-
+/*************************
+ *   Button Controller   *
+ ************************/
+$(document).ready(function() {
     // Event Listener Button Login
     $('#liffLoginButton').on('click', function() {
         //Cek Apakah user sudah login
@@ -77,6 +64,22 @@
         }
     });
  })
+
+
+/*************************
+ *       LIFF Init       *
+ ************************/
+$(document).ready(function() {
+    var myLiffId = "1653865072-pW0LzAQ9";
+
+    if(!myLiffId || myLiffId == '') {
+        $('#liffLoginContent').addClass('hidden');
+        $('#liffAppContent').addClass('hidden');
+        $('#liffIdKosong').removeClass('hidden');
+    } else {
+        initializeLiff(myLiffId);
+    }
+});
 
 //Inisialisasi
 function initializeLiff(myLiffId) {
