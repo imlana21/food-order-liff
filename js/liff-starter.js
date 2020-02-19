@@ -31,12 +31,12 @@ function initializeLiff(myLiffId) {
 
 function initializeApp() {
     if (liff.isLoggedIn()) {
-        $('#liffLoginButton').addClass('hidden');
-        $('#liffLogoutButton').removeClass('hidden');
+        $('#liffLoginButton').hide();
+        $('#liffLogoutButton').show();
         $('#nextButton').html('<a href="home.html"> Next </a>');
     } else {
-        $('#liffLoginButton').removeClass('hidden');
-        $('#liffLogoutButton').addClass('hidden');
+        $('#liffLoginButton').show();
+        $('#liffLogoutButton').hide();
     }
 }
 

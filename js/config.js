@@ -14,10 +14,4 @@ $(document).ready(function() {
 			window.location.reload();
 		}
 	});
-
-	if (liff.isLoggedIn()) {
-		
-	} else {
-		alert('Logout');
-	}
 })
