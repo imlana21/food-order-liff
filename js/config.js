@@ -2,7 +2,7 @@
  ************************
  *    Button Config     *
  ************************
- ***********************/
+ **********************
 
 
 $(document).ready(function() {
@@ -51,7 +51,8 @@ $(document).ready(function() {
 	// Button Pesan Menu
 	$('#pesanMenu').on('click', function() {
 		if (!liff.isInClient()) {
-			window.alert("Anda Membuka aplikasi lewat desktop");
+			sendAlertIfNotInClient();
+			window.alert("Pemesanan dilakukan melalui aplikasi LINE");
 		} else {
 			liff
 				.sendMessages([{
@@ -67,3 +68,4 @@ $(document).ready(function() {
 	    }
 	});
 })
+*/
