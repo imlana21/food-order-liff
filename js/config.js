@@ -39,11 +39,27 @@ $(document).ready(function() {
 			$('#welcomewrapper').addClass('hidden');
 			$('#homewrapper').removeClass('hidden');
 
-			//Get User Profile
+			// Get User Profile
     		const idToken = liff.getDecodedIDToken();
     		
+    		// Menampilkan Nama User
     		$('#welcomeMsg #userName').html(idToken['name']);
 		}
 		
+	});
+
+	// Button Pesan Menu
+	$('#pesanMenu').on('click', function() {
+		liff
+			.sendMessages([{
+            	'type': 'text',
+            	'text': "You've successfully sent a message! Hooray!"
+        	}])
+        	.then(function() {
+            	window.alert('Message sent');
+        	})
+        	.catch(function(error) {
+            	window.alert('Error sending message: ' + error);
+        	});
 	});
 })
