@@ -36,22 +36,6 @@
   margin: 6em 10px
 }
 
-#homewrapper article #list_data {
-  text-align: center;
-}
-
-#homewrapper #bt_float {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 15px;
-  overflow: hidden;
-}
-
-#homewrapper #bt_float #add_button {
-  margin-bottom: 10px;
-}
-
 /* Error Notification */
 #liffIdErrorMessage {
   text-align: center;

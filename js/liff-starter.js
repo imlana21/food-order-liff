@@ -1,4 +1,4 @@
-var LiffId = "1653779273-PnDEDLxm";
+var LiffId = "1653865072-pW0LzAQ9";
 /**
  * Cek LIFF ID
  */
@@ -40,6 +40,4 @@ function initializeApp() {
     }
 }
 
-initializeOrLiffDie(LiffId)
-
-//40:F0:2F:64:A2:0B pujikurniawan
+initializeOrLiffDie(LiffId);

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title> Dompet Q </title>
+	<title> Cafe Barokah </title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Materialize CSS -->
@@ -13,7 +13,7 @@
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="readData()">
+<body>
 	<!-- Dasar Aplikasi -->
 	<div id="homewrapper">
 		<nav>
@@ -24,90 +24,113 @@
 				<span> Data Keuangan </span>
 			</div>
 		</nav>
-		<article>
-			<div id="list_data" class="">
+		<article id="liffAppContent">
+			<div id="welcome-message">
+				<p style="text-indent: 3em"> Hai Commander, Silahkan pesan menu dibawah ini. </p>
 			</div>
-			<div id="tambah_data" class="row fadeInDownBig hidden animated">
-				<form id="form_tambah" class="col s12">
-					<div class="row">
-						<div class="input-field col s12">
-	          				<input placeholder="" id="tambah_tanggal" type="text" class="datepicker validate" required="">
-				        	<label for="tambah_tanggal"> Tanggal </label>
-	        			</div>
-						<div class="input-field col s12">
-							<select id="tambah_status" required="">
-	      						<option value="" disabled selected></option>
-	      						<option value="Keluar"> Keluar </option>
-	      						<option value="Masuk"> Masuk </option>
-	    					</select>
-				        	<label for="tambah_status"> Status </label>
-	  					</div>
-						<div class="input-field col s12">
-	          				<input placeholder="" id="tambah_keterangan" type="text" class="validate" required="">
-				        	<label for="tambah_keterangan"> Keterangan </label>
-	        			</div>
-						<div class="input-field col s12">
-	          				<input placeholder="" id="tambah_jumlah" type="number" class="validate" required="">
-				        	<label for="tambah_jumlah"> Jumlah </label>
-	        			</div>
-	        		</div>
-	        		<div class="row">
-	        			<div class="input-field col s12">
-	        				<div class="right">
-	        					<a class="waves-effect waves-light btn red cancel_button" id=""> Cancel </a>
-	        					<a class="waves-effect waves-light btn" id="simpan_button"> Tambah </a>
-	        				</div>
-	        			</div>
-	        		</div>
-				</form>
-			</div>
-			<div id="edit_data" class="row fadeInDownBig hidden animated">
-				<form id="form_edit" class="col s12">
-					<div class="row">
-						<div class="input-field col s12">
-	          				<input placeholder="" id="edit_id" type="text" class="validate" disabled="">
-				        	<label for="edit_id"> ID </label>
-	        			</div>
-						<div class="input-field col s12">
-	          				<input placeholder="" id="edit_tanggal" type="text" class="datepicker validate">
-				        	<label for="edit_tanggal"> Tanggal </label>
-	        			</div>
-						<div class="input-field col s12">
-							<select id="edit_status">
-	      						<option value="" disabled selected></option>
-	      						<option value="Keluar"> Keluar </option>
-	      						<option value="Masuk"> Masuk </option>
-	    					</select>
-				        	<label for="edit_status"> Status </label>
-	  					</div>
-						<div class="input-field col s12">
-	          				<input placeholder="" id="edit_keterangan" type="text" class="validate">
-				        	<label for="edit_keterangan"> Keterangan </label>
-	        			</div>
-						<div class="input-field col s12">
-	          				<input placeholder="" id="edit_jumlah" type="text" class="validate">
-				        	<label for="edit_jumlah"> Jumlah </label>
-	        			</div>
-	        		</div>
-	        		<div class="row">
-	        			<div class="input-field col s12">
-	        				<div class="right">
-	        					<a class="waves-effect waves-light btn red cancel_button" id=""> Cancel </a>
-	        					<a class="waves-effect waves-light btn" id="edit_button"> Edit </a>
-	        				</div>
-	        			</div>
-	        		</div>
-				</form>
-			</div>
-			<div>&nbsp</div>
+			<form action="#">
+				<div id="list-pesan">
+					<ul class="collapsible">
+					    <li>
+					      	<div class="collapsible-header"><i class="material-icons">local_pizza</i> Daftar Makanan </div>
+					      	<div class="collapsible-body">
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Indomie Rebus </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Indomie Goreng </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Bakmie </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Nasi Goreng </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Kwetiaw </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Bakmie </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Nasi Telor </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Nasi Sarden </span>
+								    </label>
+							    </div>
+					      	</div>
+					    </li>
+					    <li>
+					      	<div class="collapsible-header"><i class="material-icons">local_cafe</i> Daftar Minuman </div>
+					      	<div class="collapsible-body">
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Teh </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Kopi </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Susu </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Jeruk Peras </span>
+								    </label>
+							    </div>
+					      		<div class="row">
+								    <label>
+								    	<input type="checkbox" />
+								    	<span style="color: black"> Aqua </span>
+								    </label>
+							    </div>
+					      	</div>
+					    </li>
+					</ul>
+				</div>
+				<div class="row right">
+					<button class="waves-effect waves-light btn brown" type="reset" value="Reset"> Reset </button>
+					<button class="waves-effect waves-light btn" type="submit" value="Pesan"> Pesan </button>
+				</div>
+			</form>
 		</article>
 		<footer class="pulse animated" id="bt_float">
-			<div id="add_button" >
-					<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-				</div>
-				<div id="home_button">
-					<a class="btn-floating btn-large waves-effect waves-light blue" href="index.html"><i class="material-icons">home</i></a>
-				</div>
+			<div id="home_button">
+				<a class="btn-floating btn-large waves-effect waves-light blue" href="index.html"><i class="material-icons">home</i></a>
+			</div>
 		</footer>
 	</div>
 	
