@@ -88,8 +88,6 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
-        var pesanan = 
-
         if (!liff.isInClient()) {
             alert(pesanan);
             
@@ -97,7 +95,7 @@ $(document).ready(function() {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': pesanan
+                    'text': getPesanan()
                 }])
                 .then(function() {
                     window.alert('Message sent');
