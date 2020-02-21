@@ -17,6 +17,7 @@
 
 #homewrapper {
   overflow-x : auto;
+  position: relative;
 }
 
 #homewrapper nav {
