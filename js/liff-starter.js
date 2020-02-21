@@ -40,6 +40,8 @@ function initializeApp() {
     }
 }
 
+
+
 /*************************
  *   Button Controller   *
  ************************/
@@ -69,7 +71,7 @@ $(document).ready(function() {
         });
     }); 
 
-    // Next Button
+    // Event Listener Next Button
     $('#nextButton').on('click', function() {
         if (!liff.isLoggedIn() && !liff.isInClient()) {
             alert('Anda membuka aplikasi lewat browser. Harap Login dahulu!!!');
@@ -84,6 +86,15 @@ $(document).ready(function() {
             $('#welcomeMsg #userName').html(idToken['name']);
         }
         
+    });
+
+    //Event Listener CLose Button
+    $('#liffExitButton').on('click', function() {
+        if (!liff.isInClient()) {
+            alert('Anda membuka aplikasi lewat browser. Tekan OK untuk Close Window!!!');
+        } else {
+            liff.closeWindow();
+        }
     });
 
     // Button Pesan Menu
