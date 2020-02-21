@@ -78,6 +78,7 @@ $(document).ready(function() {
         } else {
             $('#welcomewrapper').addClass('hidden');
             $('#homewrapper').removeClass('hidden');
+            $('body').css('overflow' : 'auto');
 
             // Get User Profile
             const idToken = liff.getDecodedIDToken();
