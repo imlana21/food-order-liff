@@ -89,7 +89,7 @@ $(document).ready(function() {
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
         if (!liff.isInClient()) {
-            alert(pesanan);
+            alert(getPesanan());
             
         } else {
             liff
