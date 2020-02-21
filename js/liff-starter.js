@@ -112,7 +112,7 @@ function inputChecked() {
     //$('#pesanMenu').on('click', function() {
         var pesanan = [];
 
-        $.each($('input[name="pesanan"]'), function() {
+        $.each($('input[name="pesanan"]:checked'), function() {
             pesanan.push($(this).val());
         })
 
