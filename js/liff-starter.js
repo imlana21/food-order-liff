@@ -109,7 +109,7 @@ $(document).ready(function() {
  });
 
 function inputChecked() {
-    $('#pesanMenu').on('click', function() {
+    //$('#pesanMenu').on('click', function() {
         var pesanan = [];
 
         $.each($('input[name="pesanan"]'), function() {
@@ -117,5 +117,5 @@ function inputChecked() {
         })
 
         alert('Pesanan anda' + pesanan);
-    });
+    //});
 }
