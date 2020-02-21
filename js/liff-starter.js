@@ -104,8 +104,8 @@ $(document).ready(function() {
                 .catch(function(error) {
                     window.alert('Error sending message: ' + error);
                 });
-        }
-    });*/
+        }*/
+    });
  });
 
 function inputChecked() {
