@@ -88,7 +88,7 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
-        alert('Pesanan anda yaitu' + readPesanan(getPesanan()));
+        readPesanan(getPesanan());
         /*
         if (!liff.isInClient()) {
             window.alert("Pemesanan dilakukan melalui aplikasi LINE");
@@ -123,9 +123,14 @@ function getPesanan() {
 function readPesanan(data) {
     var pesanan = '';
 
-    $.each(data, function(index, value) {
-        pesanan = (index+1) + ". " + value + "<br>";
-    });
+    if (data != '' || data != null) {
+        $.each(data, function(index, value) {
+            pesanan = (index+1) + ". " + value + "<br>";
+        });
+    } else {
+        pesanan = '';
+    }
+    
 
     alert(pesanan);
 }
