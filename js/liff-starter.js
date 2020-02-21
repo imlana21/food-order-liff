@@ -95,7 +95,8 @@ $(document).ready(function() {
         };
 
         if (!liff.isInClient()) {
-            window.alert("Pemesanan dilakukan melalui aplikasi LINE");
+            alert(pesanan);
+            
         } else {
             liff
                 .sendMessages([{
