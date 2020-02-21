@@ -88,7 +88,7 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
-        inputChecked();
+        alert('Pesanan anda' + inputChecked();
         /*
         if (!liff.isInClient()) {
             window.alert("Pemesanan dilakukan melalui aplikasi LINE");
@@ -116,6 +116,6 @@ function inputChecked() {
             pesanan.push($(this).val());
         })
 
-        alert('Pesanan anda' + pesanan);
+        return pesanan;
     //});
 }
