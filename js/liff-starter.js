@@ -128,7 +128,7 @@ function readPesanan(data) {
             pesanan = (index+1) + ". " + value + "<br>";
         });
     } else {
-        pesanan = 'Silahkan Pesan!!!;
+        pesanan = 'Silahkan Pesan!!!';
     }
     
 
