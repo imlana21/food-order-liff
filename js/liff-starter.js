@@ -128,9 +128,9 @@ function readPesanan(data) {
             pesanan.push((index+1) + ". " + value + "<br>");
         });
     } else {
-        pesanan = 'Silahkan Pesan!!!';
+        pesanan.push('Silahkan Pesan!!!');
     }
     
 
-    alert(pesanan[*]);
+    alert(pesanan);
 }
