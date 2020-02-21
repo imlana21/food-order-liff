@@ -123,7 +123,7 @@ function getPesanan() {
 function readPesanan(data) {
     var pesanan = [];
 
-    if (data != '' || data != null) {
+    if (data != '' || data != null || data != undefined) {
         $.each(data, function(index, value) {
             pesanan = (index+1) + ". " + value + "<br>";
         });
@@ -132,5 +132,5 @@ function readPesanan(data) {
     }
     
 
-    alert(pesanan);
+    alert(pesanan[*]);
 }
