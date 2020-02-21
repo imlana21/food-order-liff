@@ -125,7 +125,7 @@ function readPesanan(data) {
 
     if (data != '' || data != null || data != undefined) {
         $.each(data, function(index, value) {
-            pesanan = (index+1) + ". " + value + "<br>";
+            pesanan.push((index+1) + ". " + value + "<br>");
         });
     } else {
         pesanan = 'Silahkan Pesan!!!';
