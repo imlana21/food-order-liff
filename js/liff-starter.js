@@ -123,14 +123,9 @@ function getPesanan() {
 function readPesanan(data) {
     var pesanan = [];
 
-    if (data != '' || data != null || data != undefined) {
-        $.each(data, function(index, value) {
-            pesanan.push((index+1) + ". " + value + "<br>");
-        });
-    } else {
-        pesanan.push('Silahkan Pesan!!!');
-    }
-    
+    $.each(data, function(index, value) {
+        pesanan.push((index+1) + ". " + value + "<br>");
+    });    
 
     alert(pesanan);
 }
