@@ -88,7 +88,7 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
-        var pesanan = function() {
+        var pesanan = new function() {
             $.each(getPesanan(), function(index, value) {
                 pesanan.push((index+1) + ". " + value + " <br>");
             }); 
