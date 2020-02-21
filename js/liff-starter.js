@@ -88,15 +88,19 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
-        readPesanan(getPesanan());
-        /*
+        var pesanan = function() {
+            $.each(getPesanan(), function(index, value) {
+                pesanan.push((index+1) + ". " + value + " <br>");
+            }); 
+        };
+
         if (!liff.isInClient()) {
             window.alert("Pemesanan dilakukan melalui aplikasi LINE");
         } else {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': "You've successfully sent a message! Hooray!"
+                    'text': pesanan
                 }])
                 .then(function() {
                     window.alert('Message sent');
@@ -104,28 +108,17 @@ $(document).ready(function() {
                 .catch(function(error) {
                     window.alert('Error sending message: ' + error);
                 });
-        }*/
+        }
     });
  });
 
+// Fungsi untuk mengambil data dari Checkbox
 function getPesanan() {
-    //$('#pesanMenu').on('click', function() {
-        var pesanan = [];
-
-        $.each($('input[name="pesanan"]:checked'), function() {
-            pesanan.push($(this).val());
-        })
-
-        return pesanan;
-    //});
-}
-
-function readPesanan(data) {
     var pesanan = [];
 
-    $.each(data, function(index, value) {
-        pesanan.push((index+1) + ". " + value + "<br>");
-    });    
+    $.each($('input[name="pesanan"]:checked'), function() {
+        pesanan.push($(this).val());
+    })
 
-    alert(pesanan);
+    return pesanan;
 }
