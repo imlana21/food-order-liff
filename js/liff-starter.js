@@ -92,6 +92,7 @@ $(document).ready(function() {
     $('#liffExitButton').on('click', function() {
         if (!liff.isInClient()) {
             alert('Anda membuka aplikasi lewat browser. Tekan OK untuk Close Window!!!');
+            window.close();
         } else {
             liff.closeWindow();
         }
