@@ -88,11 +88,7 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
-        var pesanan = function() {
-            $.each(getPesanan(), function(index, value) {
-                (index+1) + ". " + value + " <br>";
-            });
-        };
+        var pesanan = 
 
         if (!liff.isInClient()) {
             alert(pesanan);
@@ -117,8 +113,8 @@ $(document).ready(function() {
 function getPesanan() {
     var pesanan = [];
 
-    $.each($('input[name="pesanan"]:checked'), function() {
-        pesanan.push($(this).val());
+    $.each($('input[name="pesanan"]:checked'), function(index) {
+        pesanan.push((index+1) + ". " + $(this).val() + "<br/>");
     })
 
     return pesanan;
