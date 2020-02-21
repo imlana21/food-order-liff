@@ -1,4 +1,46 @@
 /*************************
+ *       LIFF Init       *
+ ************************/
+$(document).ready(function() {
+    var myLiffId = "1653865072-pW0LzAQ9";
+
+    if(!myLiffId || myLiffId == '') {
+        $('#liffLoginContent').addClass('hidden');
+        $('#liffAppContent').addClass('hidden');
+        $('#liffIdKosong').removeClass('hidden');
+    } else {
+        initializeLiff(myLiffId);
+    }
+});
+
+//Inisialisasi
+function initializeLiff(myLiffId) {
+    liff
+        .init({
+            liffId : myLiffId
+        })
+        .then(() => {
+            initializeApp();
+        })
+        .catch((err) => {
+            $('#errorCode').append(err);
+            $('#liffAppContent').addClass('hidden');
+            $('#liffIdErrorMessage').removeClass('hidden');
+        });
+}
+
+function initializeApp() {
+    if (liff.isLoggedIn()) {
+        $('#liffLoginButton').hide();
+        $('#liffLogoutButton').show();
+        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
+    } else {
+        $('#liffLoginButton').show();
+        $('#liffLogoutButton').hide();
+    }
+}
+
+/*************************
  *   Button Controller   *
  ************************/
 $(document).ready(function() {
@@ -46,6 +88,8 @@ $(document).ready(function() {
 
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
+        inputChecked();
+        /*
         if (!liff.isInClient()) {
             window.alert("Pemesanan dilakukan melalui aplikasi LINE");
         } else {
@@ -61,48 +105,17 @@ $(document).ready(function() {
                     window.alert('Error sending message: ' + error);
                 });
         }
+    });*/
+ });
+
+function inputChecked() {
+    $('#pesanMenu').on('click', function() {
+        var pesanan = [];
+
+        $.each($('input[name="pesanan"]'), function() {
+            pesanan.push($(this).val());
+        })
+
+        alert('Pesanan anda' + pesanan);
     });
- })
-
-
-/*************************
- *       LIFF Init       *
- ************************/
-$(document).ready(function() {
-    var myLiffId = "1653865072-pW0LzAQ9";
-
-    if(!myLiffId || myLiffId == '') {
-        $('#liffLoginContent').addClass('hidden');
-        $('#liffAppContent').addClass('hidden');
-        $('#liffIdKosong').removeClass('hidden');
-    } else {
-        initializeLiff(myLiffId);
-    }
-});
-
-//Inisialisasi
-function initializeLiff(myLiffId) {
-    liff
-        .init({
-            liffId : myLiffId
-        })
-        .then(() => {
-            initializeApp();
-        })
-        .catch((err) => {
-            $('#errorCode').append(err);
-            $('#liffAppContent').addClass('hidden');
-            $('#liffIdErrorMessage').removeClass('hidden');
-        });
-}
-
-function initializeApp() {
-    if (liff.isLoggedIn()) {
-        $('#liffLoginButton').hide();
-        $('#liffLogoutButton').show();
-        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
-    } else {
-        $('#liffLoginButton').show();
-        $('#liffLogoutButton').hide();
-    }
 }
