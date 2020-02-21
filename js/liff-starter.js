@@ -125,7 +125,7 @@ function readPesanan(data) {
 
     if (data != '' || data != null) {
         $.each(data, function(index, value) {
-            pesanan = (index+1) + ". " + value + "<br>";
+            pesanan[index] = (index+1) + ". " + value + "<br>";
         });
     } else {
         pesanan = '';
