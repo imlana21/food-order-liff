@@ -121,14 +121,14 @@ function getPesanan() {
 }
 
 function readPesanan(data) {
-    var pesanan = '';
+    var pesanan = [];
 
     if (data != '' || data != null) {
         $.each(data, function(index, value) {
-            pesanan[index] = (index+1) + ". " + value + "<br>";
+            pesanan = (index+1) + ". " + value + "<br>";
         });
     } else {
-        pesanan = '';
+        pesanan = 'Silahkan Pesan!!!;
     }
     
 
