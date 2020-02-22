@@ -102,13 +102,13 @@ $(document).ready(function() {
     // Button Pesan Menu
     $('#pesanMenu').on('click', function() {
         if (!liff.isInClient()) {
-            alert(getPesanan());
+            alert('Buka aplikasi lewat LINE');
             
         } else {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': "You've successfully sent a message! Hooray!"
+                    'text': "Menu yang anda pesan adalah <br/><br/>" + getPesanan() 
                 }])
                 .then(function() {
                     window.alert('Message sent');
