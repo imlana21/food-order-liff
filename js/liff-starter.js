@@ -40,7 +40,9 @@ function initializeApp() {
             $('#liffLogoutButton').addClass('hidden');
         }
     } else {
-        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
+        if (liff.isLoggedIn()) {
+            $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
+        }
     }
     
 }
@@ -109,22 +111,17 @@ $(document).ready(function() {
         if (!liff.isInClient()) {
             alert('Buka aplikasi lewat LINE');
         } else {
-            if (!liff.isLoggedIn()) {
-                liff
-                    .sendMessages([{
-                        'type': 'text',
-                        'text': "Berikut pesanan anda : \n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
-                    }])
-                    .then(function() {
-                        window.alert('Message sent');
-                    })
-                    .catch(function(error) {
-                        window.alert('Error sending message: ' + error);
-                    });
-            } else {
-                alert('Silahkan login terlebih dahulu');
-            }
-
+            liff
+                .sendMessages([{
+                    'type': 'text',
+                    'text': "Berikut pesanan anda : \n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
+                }])
+                .then(function() {
+                    window.alert('Message sent');
+                })
+                .catch(function(error) {
+                    window.alert('Error sending message: ' + error);
+                });
         }
     });
  });
