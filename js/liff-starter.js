@@ -108,7 +108,7 @@ $(document).ready(function() {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': "Menu yang anda pesan adalah <br/><br/>" + getPesanan() 
+                    'text': "Berikut pesanan anda : \n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
                 }])
                 .then(function() {
                     window.alert('Message sent');
@@ -125,7 +125,7 @@ function getPesanan() {
     var pesanan = [];
 
     $.each($('input[name="pesanan"]:checked'), function(index) {
-        pesanan.push((index+1) + ". " + $(this).val() + "<br/>");
+        pesanan.push((index+1) + ". " + $(this).val() + "\n");
     })
 
     return pesanan;
