@@ -108,10 +108,7 @@ $(document).ready(function() {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': new function() {
-                        "Pesanan anda adalah"
-                        //"Berikut pesanan anda : \n\n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
-                    }
+                    'text': "Berikut pesanan anda : \n\n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
                 }])
                 .then(function() {
                     window.alert('Message sent');
@@ -128,7 +125,7 @@ function getPesanan() {
     var pesanan = [];
 
     $.each($('input[name="pesanan"]:checked'), function(index) {
-        pesanan.push((index+1) + ". " + $(this).val() + "\n");
+        pesanan.push($(this).val());
     })
 
     return pesanan;
