@@ -108,19 +108,23 @@ $(document).ready(function() {
     $('#pesanMenu').on('click', function() {
         if (!liff.isInClient()) {
             alert('Buka aplikasi lewat LINE');
-            
         } else {
-            liff
-                .sendMessages([{
-                    'type': 'text',
-                    'text': "Berikut pesanan anda : \n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
-                }])
-                .then(function() {
-                    window.alert('Message sent');
-                })
-                .catch(function(error) {
-                    window.alert('Error sending message: ' + error);
-                });
+            if (!liff.isLoggedIn()) {
+                liff
+                    .sendMessages([{
+                        'type': 'text',
+                        'text': "Berikut pesanan anda : \n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
+                    }])
+                    .then(function() {
+                        window.alert('Message sent');
+                    })
+                    .catch(function(error) {
+                        window.alert('Error sending message: ' + error);
+                    });
+            } else {
+                alert('Silahkan login terlebih dahulu');
+            }
+
         }
     });
  });
