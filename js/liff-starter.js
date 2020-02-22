@@ -30,14 +30,19 @@ function initializeLiff(myLiffId) {
 }
 
 function initializeApp() {
-    if (liff.isLoggedIn()) {
-        $('#liffLoginButton').hide();
-        $('#liffLogoutButton').show();
-        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
+    if (!liff.isInClient()) {
+        if (liff.isLoggedIn()) {
+            $('#liffLoginButton').addClass('hidden');
+            $('#liffLogoutButton').removeClass('hidden');
+            $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
+        } else {
+            $('#liffLoginButton').removeClass('hidden');
+            $('#liffLogoutButton').addClass('hidden');
+        }
     } else {
-        $('#liffLoginButton').show();
-        $('#liffLogoutButton').hide();
+        $('#nextButton').html('<a href="Javascript:void(0)"> Next >></a>');
     }
+    
 }
 
 
