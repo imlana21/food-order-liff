@@ -108,7 +108,7 @@ $(document).ready(function() {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': getPesanan()
+                    'text': "You've successfully sent a message! Hooray!"
                 }])
                 .then(function() {
                     window.alert('Message sent');
