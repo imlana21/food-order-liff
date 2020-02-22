@@ -114,7 +114,7 @@ $(document).ready(function() {
             liff
                 .sendMessages([{
                     'type': 'text',
-                    'text': "Berikut pesanan anda : \n\n" + getPesanan() + "\n\n Mohon tunggu sebentar yah :)."
+                    'text': "Berikut pesanan anda : \n\n*" + getPesanan() + "*\n\n Mohon tunggu sebentar yah :)."
                 }])
                 .then(function() {
                     window.alert('Message sent');
