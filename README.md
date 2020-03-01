@@ -1,6 +1,11 @@
 ## Tentang Aplikasi
 
-Aplikasi ini dibuat sebagai hasil dari belajar LIFF. 
+Aplikasi ini dibuat sebagai hasil akhir dari belajar LIFF. 
+
+Nama Aplikasi : Pesan Makanan Online Cafe Barokah
+
+
+## Fitur
 
 Fitur-fitur LIFF yang ada pada aplikasi ini yaitu :
 
