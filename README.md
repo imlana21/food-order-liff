@@ -21,7 +21,7 @@ Untuk lebih jelasnya mengenai apa itu LIFF dapat dibaca [Disini](https://develop
 
 ## Testing LIFF App
 ##### __Web Browser__
-    + URL : https://dicoding-pesanmakan.herokuapp.com/
+    + URL : https://pesanmakan.herokuapp.com/
 
 ##### __LINE APP__
     + URL : line://app/1653865072-pW0LzAQ9
